@@ -2053,6 +2053,10 @@ body {
   padding-inline-end: 2px;
 }
 
+.hidden {
+  display: none;
+}
+
 .splitToolbarButton {
   margin: 2px;
   display: inline-block;
