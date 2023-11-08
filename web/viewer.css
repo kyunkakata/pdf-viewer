@@ -511,7 +511,8 @@
   font: inherit;
   font-style: inherit;
   font-weight: inherit;
-  font-kerning: inherit;
+  -webkit-font-kerning: inherit;
+          font-kerning: inherit;
   letter-spacing: -0.01px;
   text-align: inherit;
   text-decoration: inherit;
@@ -550,7 +551,8 @@
 .xfaFont {
   color: black;
   font-weight: normal;
-  font-kerning: none;
+  -webkit-font-kerning: none;
+          font-kerning: none;
   font-size: 10px;
   font-style: normal;
   letter-spacing: 0;
@@ -1614,6 +1616,9 @@ body {
 #findInput {
   width: 200px;
 }
+#findInput::-webkit-input-placeholder {
+  color: rgba(191, 191, 191, 1);
+}
 #findInput::-moz-placeholder {
   font-style: normal;
 }
@@ -2551,6 +2556,7 @@ dialog :link {
 }
 
 .grab-to-pan-grab {
+  cursor: -webkit-grab !important;
   cursor: grab !important;
 }
 .grab-to-pan-grab
@@ -2559,6 +2565,7 @@ dialog :link {
 }
 .grab-to-pan-grab:active,
 .grab-to-pan-grabbing {
+  cursor: -webkit-grabbing !important;
   cursor: grabbing !important;
   position: fixed;
   background: rgba(0, 0, 0, 0);
