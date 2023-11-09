@@ -79585,7 +79585,7 @@ var MessageHandler = /*#__PURE__*/function () {
         targetName: this.targetName,
         action: actionName,
         data
-      }, transfers);
+      });
     }
   }, {
     key: "sendWithPromise",
@@ -79600,7 +79600,7 @@ var MessageHandler = /*#__PURE__*/function () {
           action: actionName,
           callbackId,
           data
-        }, transfers);
+        });
       } catch (ex) {
         capability.reject(ex);
       }
@@ -79631,7 +79631,7 @@ var MessageHandler = /*#__PURE__*/function () {
             streamId,
             data,
             desiredSize: controller.desiredSize
-          }, transfers);
+          });
           return startCapability.promise;
         },
         pull: function pull(controller) {
@@ -79690,7 +79690,7 @@ var MessageHandler = /*#__PURE__*/function () {
             stream: StreamKind.ENQUEUE,
             streamId,
             chunk
-          }, transfers);
+          });
         },
         close() {
           if (this.isCancelled) {
