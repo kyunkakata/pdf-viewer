@@ -1894,7 +1894,6 @@ var PDFViewerApplication = {
         _boundEvents.removeWindowResolutionChange = null;
       });
     }
-    addWindowResolutionChange();
     _boundEvents.windowResize = function () {
       eventBus.dispatch("resize", {
         source: window
@@ -13682,24 +13681,7 @@ function _updateContainerHeightCss2() {
     _ui_utils.docStyle.setProperty("--viewer-container-height", "".concat(height, "px"));
   }
 }
-function _resizeObserverCallback2(entries) {
-  var _iterator11 = _createForOfIteratorHelper(entries),
-    _step11;
-  try {
-    for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
-      var entry = _step11.value;
-      if (entry.target === this.container) {
-        _classPrivateMethodGet(this, _updateContainerHeightCss, _updateContainerHeightCss2).call(this, Math.floor(entry.borderBoxSize[0].blockSize));
-        _classPrivateFieldSet(this, _containerTopLeft, null);
-        break;
-      }
-    }
-  } catch (err) {
-    _iterator11.e(err);
-  } finally {
-    _iterator11.f();
-  }
-}
+function _resizeObserverCallback2(entries) {}
 
 /***/ }),
 /* 31 */
